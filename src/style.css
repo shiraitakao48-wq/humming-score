@@ -1,0 +1,165 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f4f8;
+  color: #263445;
+  font-family: Arial, "Meiryo", sans-serif;
+}
+
+.header {
+  background: #182b42;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  color: #cbd5e1;
+}
+
+.container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+  border-bottom: 1px solid #e5eaf0;
+  padding-bottom: 15px;
+}
+
+button {
+  border: none;
+  background: #2878d0;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:disabled {
+  background: #b8c2cc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.record-area {
+  background: #f2f6fb;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.record-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+#startBtn {
+  background: #e74c3c;
+}
+
+#stopBtn {
+  background: #526579;
+}
+
+#timer {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.upload-area {
+  margin-top: 20px;
+}
+
+.upload-area input {
+  display: block;
+  margin-top: 12px;
+}
+
+#analysisStatus {
+  margin-top: 20px;
+  color: #526579;
+}
+
+#noteList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.note-item {
+  background: #e7f1ff;
+  color: #225da0;
+  padding: 9px 14px;
+  border-radius: 6px;
+}
+
+#sheetMusic {
+  overflow-x: auto;
+  min-height: 160px;
+  padding: 20px 5px;
+  background: white;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#pdfBtn {
+  background: #d9534f;
+}
+
+#midiBtn {
+  background: #198754;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #8793a1;
+}
+
+@media (max-width: 600px) {
+  .record-buttons,
+  .export-buttons {
+    flex-direction: column;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}

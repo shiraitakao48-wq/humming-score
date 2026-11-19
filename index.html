@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humming Score</title>
+  <meta name="description" content="鼻歌・口笛から楽譜を自動生成します。">
+  <meta name="theme-color" content="#182b42">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <h1>🎵 Humming Score</h1>
+      <p>鼻歌・口笛から楽譜を自動生成</p>
+    </header>
+
+    <main class="container">
+
+      <section class="panel">
+        <h2>1. 音声入力</h2>
+
+        <div class="record-area">
+          <div id="recordStatus">録音待機中</div>
+
+          <div class="record-buttons">
+            <button id="startBtn">● 録音開始</button>
+            <button id="stopBtn" disabled>■ 録音停止</button>
+          </div>
+
+          <div id="timer">00:00</div>
+        </div>
+
+        <audio id="audioPlayer" controls></audio>
+
+        <div class="upload-area">
+          <label for="audioFile">
+            音声ファイルを読み込む
+          </label>
+          <input
+            type="file"
+            id="audioFile"
+            accept="audio/*"
+          >
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>2. 音声解析</h2>
+
+        <button id="analyzeBtn" disabled>
+          音程・リズムを解析する
+        </button>
+
+        <div id="analysisStatus">
+          録音または音声ファイルを選択してください。
+        </div>
+
+        <div id="noteList"></div>
+      </section>
+
+      <section class="panel">
+        <h2>3. 楽譜</h2>
+
+        <div id="sheetMusic">
+          楽譜はここに表示されます。
+        </div>
+
+        <div class="export-buttons">
+          <button id="pdfBtn" disabled>
+            PDF出力
+          </button>
+
+          <button id="midiBtn" disabled>
+            MIDI出力
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      Humming Score
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
